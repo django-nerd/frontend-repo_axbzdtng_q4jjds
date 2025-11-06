@@ -51,11 +51,11 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative min-h-[92vh] w-full overflow-hidden bg-[#0A0A0A] text-white">
-      {/* 3D Spline Scene */}
+      {/* 3D Spline Scene - updated to loading-themed animation */}
       <div className="absolute inset-0">
         {mounted && (
           <Spline
-            scene="https://prod.spline.design/EF7JOSsHLk16Tlw9/scene.splinecode"
+            scene="https://prod.spline.design/igThmltzmqv5hkWo/scene.splinecode"
             style={{ width: '100%', height: '100%' }}
           />
         )}

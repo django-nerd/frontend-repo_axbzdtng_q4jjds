@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Projects from './components/Projects';
 import ExperienceContact from './components/ExperienceContact';
+import LoadingScreen from './components/LoadingScreen';
 import { Moon, Sun } from 'lucide-react';
 
 function ThemeToggle() {
@@ -26,8 +27,12 @@ function ThemeToggle() {
 }
 
 export default function App() {
+  const [ready, setReady] = useState(false);
+
   return (
     <div className="min-h-screen scroll-smooth bg-[#0A0A0A] antialiased">
+      {!ready && <LoadingScreen onDone={() => setReady(true)} />}
+
       <ThemeToggle />
       <header className="fixed inset-x-0 top-0 z-40 mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-12 lg:px-16">
         <a href="#home" className="font-mono text-sm text-teal-200">&gt; preyas.dev</a>
